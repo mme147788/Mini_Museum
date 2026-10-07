@@ -1,89 +1,117 @@
-/* ===== Step 2: Type Selectors ===== */
 
-h1 {
-  color: darkslateblue;
-  font-size: 40px;
+h1{
+  color: rgb(48, 5, 88);
+  font-size: 30px;
 }
 
-h2 {
-  color: teal;
-  font-size: 28px;
+h2{
+  color:rgb(1, 1, 47);
+  font-size: 16x;
+  font-weight:bold;
 }
 
-nav a {
+nav a{
   text-transform: uppercase;
   font-weight: bold;
 }
 
-footer {
-  background-color: #333333;
-  color: white;
+footer{
+  background-color: rgb(204, 224, 243);
+  color: rgb(1, 1, 47);
+  padding: 10px; 
 }
 
-/* ===== Step 3: Class Selectors ===== */
-
-.artist-card {
-  border: 2px solid darkslateblue;
-  border-radius: 10px;
-  background-color: lavender;
+article{
+  margin: 10px;
+  padding: 10px;
 }
 
-.thumbnail {
-  border: 3px solid #333333;
-  border-radius: 8px;
+figcaption{
+  text-align: center;
 }
 
-/* ===== Step 4: Id Selectors ===== */
-
-#vangogh h2 {
-  color: goldenrod;
-}
-
-#monet h2 {
-  color: cornflowerblue;
-}
-
-#rembrandt h2 {
-  color: saddlebrown;
-}
-
-#welcome-text {
-  font-size: 22px;
-}
-
-/* ===== Step 5: Parent + Child Selectors ===== */
-
-header nav a {
-  color: darkslateblue;
+header h1 {
+    text-align: center;
 }
 
 main article h2 {
-  font-size: 32px;
+    color:  rgb(48, 5, 88);
+    font-size: 20px;
+    text-align: center;
+    
 }
 
-footer a {
-  color: white;
+article img {
+  width: 300px;
+  display: block;
+  margin: 0 auto;
 }
 
-/* ===== Step 6: Specificity Check ===== */
-
-/*
-  The "Visit Us" <h2> in visit.html has class="section-title".
-  Two rules try to color it:
-    h2             { color: teal; }     (type selector, Step 2)
-    .section-title { color: crimson; }  (class selector, below)
-  Crimson wins: a class selector is more specific than a type selector,
-  so it wins no matter which rule comes first in the file.
-*/
-
-.section-title {
-  color: crimson;
+.logo {
+  display: block;
+  margin: 0 left;
 }
 
-/*
-  Specificity scores (id, class, type):
-    h2              -> (0, 0, 1)  one type
-    .artist-card    -> (0, 1, 0)  one class
-    #vangogh h2     -> (1, 0, 1)  one id + one type
-    header nav a    -> (0, 0, 3)  three types
-*/
+.artist-card{
+  border: 10px solid rgb(48, 5, 88);
+  border-radius:5px;
+  background-color:rgb(145, 166, 185);
+  width: 400px; 
+  text-align:justify;
+  color:rgb(48, 5, 88);
+  box-shadow: 6px 6px 20px gray ;
+  margin: 0 auto 20px;
+}
+
+/* העיצוב שלהלן דורס את העיצוב שהוגדר לכותרת2 הואיל וולקלאס יש ערך גבוה יותר */
+.visit-title{
+  color:brown;
+  font-weight: bolder;
+}
+
+/* ניקוד: 11 */
+.artist-card a{
+  display: block;
+  text-align: center;
+}
+/* ניקוד: 10 */
+.thumbnail {
+    width: 200px;
+    height: 200px;
+    border: 5px soild  rgb(48, 5, 88);
+    border-radius:5px;
+    margin:10px;
+    box-shadow: 6px 6px 20px gray;
+}
+
+.popup{
+  display: none;  
+}
+
+.popup:target {
+    display: block;
+}
+
+#vangogh h2 {
+  color:rgb(12, 12, 93)
+}
+
+/* ניקוד: 101 */
+#claudemonet h2 {
+  color:rgb(66, 24, 66)
+}
+
+#rembrandt h2 {
+  color:rgb(97, 15, 15)
+}
+
+#welcome {
+  font-size: larger;
+}
+
+#popup_images{
+  display:block;
+}
+
+
+
